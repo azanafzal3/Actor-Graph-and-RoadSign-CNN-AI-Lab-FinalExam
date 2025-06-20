@@ -52,7 +52,7 @@ data_dir/
   - Dropout for regularization
 
 ---
-###DataSet Link for this
+### DataSet Link for this exam
 https://drive.google.com/drive/folders/1u0KALHf6sAqh_Yn5CkxLbN5qP14fIQPC?usp=drive_link
 
 ---
