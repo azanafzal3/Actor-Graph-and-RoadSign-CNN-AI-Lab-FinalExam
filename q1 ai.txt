@@ -1,0 +1,17 @@
+Q1:
+In the "six degrees of kevin bacon" game, the idea is that any actor in teh hollywood film industry can be linked to kevin bacon thorugh  a chain of shared movie appearances, with no more than six connections. each connection represents a film in which two actors appeared together.
+
+This concept can be extended to find the shortest connection between two actors by tracing a sequence of movies that link tehm.
+
+For instance, the shortest path between jennifer lawrence and tom hanks is two steps : jennifer lawrence co-starred with kevin bacon in X-men: First Class, and Kevin Bacon co-starred with Tom Hanks in Apollo 13.
+
+We can model this as a search problem, where each state represents an actor and each action corresponds to a movie that connects one actor to another. the goal is to find shortest sequence of such connections- from a given starting actor to a target actor using search techniques.
+
+You are given a dataset that inlcudes csv files that organize information in a structured, text-based format. in a csv file , each row represents a  single data entry, and commas separated the values within each row.
+
+Start by examining small/people.csv. This file contains data on individuals where each person has a unique id along with their name and year of birth.
+Next, look at small/movies.csv. Similar to people each movie has a unique id along with its title and the year it was resolved.
+
+Finally open small/stars.csv. This file creates the connection between actors and movies. Each row contains a person_id and a movie_id, indicating that the actor with the given id appeared in the movie with the corresponding id. For example, the first row(excluding the header) lists the pair 102,104257, meaning that the person with ID 102-Kevin Bacon-starred in the movie with ID 104257, which is A few Good Men. This relationship can be verified by cross-referencing the entries in people.csv and movie.csv.
+
+Your task is to create an AI tool thatcfinds the shortest connection between two actors by tracing a sequence of movies that link them. In the last cell of your implementation, you need to give reasoning for your chosen search approach.

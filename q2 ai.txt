@@ -1,0 +1,32 @@
+[CLO 4: Understand and implement basic machine learning and deep learning algorithms and their training, and testing.]
+
+Q2:
+As the development of self-driving car progresses, one of the major challenges lies in computer vision- enabling these vehicles to interpret and understand their surroundings through digital images. A critical aspect of this capability is the recognition and differentiation of road signs, such as stop signs, speed limit signs, yield signs and others. Succesfully identifying these signs is essential for ensuring that autonomous vehicles can make safe and lawful driving decisions.
+
+In this question, you'll design and train a neutral network to classify road signs using images as input.To achieve this, you'll need a labeled dataset- a collection of road signs images that are already categorized according to the type of sign they depict(e.g,, stop,yield,speed limit). The neutral network will learn to recognize patterns and features within these labeled images to accurately classify new, unseen road sign images.
+
+You are required to create a load_data () function. The load_data function is responsible for loading and preprocessing the image dataset. It should take a single argument, data_dir, which specifies the path to directory containing the dataset.
+
+Inside data_dir, there will be subdirectories named 0 through NUM_CATEGORIES - 1, with each subdirectory representing a different category of road signs. Each of these category folders will contain multiple image files corresponding to that category.
+The function should be:
+1: Use the OpenCV-Python module(cv2) to read each image as a numpy.ndarray (a multidimensional NumPy array)
+2: Resize each image to a fixed width and height, defined by constants IMG_WIDTH and IMG_HEIGHT, so that all images have consistent dimesions required by the neural network.
+3: Collect all the images in a list called images, and store the corresponding category number (As an integer) for each image in a separate list called labels.
+
+The function should be platform-independent to ensure compatibility across different operating systems (e.g,, Windows, macOS, Linux). To do this, use os.path.join to construct file paths and avoid hardcoding path separators like / or \.
+
+Finally, the function should return a tuple: (images, labels)
+1: images: a list of all image arrays (each resized and represented as a NumPy array)
+2: labels: a list of integers, where each integer corresponds to the category of the associated image in images.
+
+You can assume that the input to the neutral network will have the shape (IMG_WIDTH, IMG_HEIGHT,3), meaning each input is a color image with the specified width and height, and three channels for red, green and blue.
+
+The output layer of your neutral network should contain NUM_CATEGORIES units, with each unit representing one traffic sign category. This allows the model to output a probability distribution over all possible classes using a softmax activation functions. 
+
+The number of layers and the types of layers you include in between are up to you. You may wish to experiment with:
+
+1: Different numbers of convolutional and pooling layers
+2: Different numbers and sizes of filters for convolutional layers
+3: Different pool sizes for pooling layers
+4: Different numbers and sizes of hidden layers
+5: Dropout
